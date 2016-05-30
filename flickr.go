@@ -138,6 +138,10 @@ type Photo struct {
 	Owner    string `xml:"owner,attr"`
 	Server   int    `xml:"server,attr"`
 	IsPublic bool   `xml:"ispublic,attr"`
+	UploadDate string `xml:"dateupload,attr"`
+	OwnerName string `xml:"ownername,attr"`
+	IconServer string `xml:"iconserver,attr"`
+	Tags string `xml:"tags,attr"`
 }
 
 type Photos struct {
@@ -168,6 +172,7 @@ func (self Connection) PhotosSearch(query map[string]string, response *PhotosSea
 		return err
 	}
 	err = xml.Unmarshal(body, &response)
+
 	return err
 }
 
