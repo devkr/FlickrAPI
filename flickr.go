@@ -124,24 +124,24 @@ func (connection *Connection) execute(request *Request) (body []byte, ret error)
 	return body, nil
 }
 
-
 // flickr.photos.search
 
 type Photo struct {
 	//XMLName  xml.Name `xml:"photo"`
-	Secret   string `xml:"secret,attr"`
-	Farm     int    `xml:"farm,attr"`
-	Title    string `xml:"title,attr"`
-	IsFriend bool   `xml:"isfriend,attr"`
-	IsFamily bool   `xml:"isfamily,attr"`
-	Id       string `xml:"id,attr"`
-	Owner    string `xml:"owner,attr"`
-	Server   int    `xml:"server,attr"`
-	IsPublic bool   `xml:"ispublic,attr"`
+	Secret     string `xml:"secret,attr"`
+	Farm       int    `xml:"farm,attr"`
+	Title      string `xml:"title,attr"`
+	IsFriend   bool   `xml:"isfriend,attr"`
+	IsFamily   bool   `xml:"isfamily,attr"`
+	Id         string `xml:"id,attr"`
+	Owner      string `xml:"owner,attr"`
+	Server     int    `xml:"server,attr"`
+	IsPublic   bool   `xml:"ispublic,attr"`
 	UploadDate string `xml:"dateupload,attr"`
-	OwnerName string `xml:"ownername,attr"`
+	OwnerName  string `xml:"ownername,attr"`
 	IconServer string `xml:"iconserver,attr"`
-	Tags string `xml:"tags,attr"`
+	Tags       string `xml:"tags,attr"`
+	Views      int    `xml:"views,attr"`
 }
 
 type Photos struct {
