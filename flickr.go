@@ -142,6 +142,8 @@ type Photo struct {
 	IconServer string `xml:"iconserver,attr"`
 	Tags       string `xml:"tags,attr"`
 	Views      int    `xml:"views,attr"`
+	OrigWidth  int    `xml:"o_width,attr"`
+	OrigHeight int    `xml:"o_height,attr"`
 }
 
 type Photos struct {
